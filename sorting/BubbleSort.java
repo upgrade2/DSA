@@ -5,24 +5,24 @@ import java.util.Arrays;
 public class BubbleSort {
 
 
-    public static void bubbleSort(int nums[]){
-        int n = nums.length;
+    public static void bubbleSort(int numbs[]){
+        int n = numbs.length;
         boolean swapped;
         int iteration=0;
         for(int i=0; i<n-1; i++){
             swapped=false;
             for(int j=0;j<n-i-1;j++){
-                if(nums[j]>nums[j+1]){
+                if(numbs[j]>numbs[j+1]){
 
-                    int temp=nums[j];
-                    nums[j]=nums[j+1];
-                    nums[j+1]=temp;
+                    int temp=numbs[j];
+                    numbs[j]=numbs[j+1];
+                    numbs[j+1]=temp;
                     swapped=true;
                 }
             iteration++;
-                System.out.println("iteration:"+iteration);
+                System.out.println(STR."Iteration:\{iteration}");
             }if (!swapped){
-System.out.println("Iteration:"+iteration);
+System.out.println(STR."Iteration:\{iteration}");
             }break;
         }
 
