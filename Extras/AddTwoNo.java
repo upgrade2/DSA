@@ -1,3 +1,5 @@
+package Extras;
+
 // Definition for singly-linked list.
 class ListNode {
     int val;
@@ -7,7 +9,7 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-// Solution class containing the addTwoNumbers method
+// Extras.Solution class containing the addTwoNumbers method
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
@@ -47,7 +49,7 @@ public class AddTwoNo {
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
 
-        // Creating an instance of the Solution class
+        // Creating an instance of the Extras.Solution class
         Solution solution = new Solution();
 
         // Adding the two numbers

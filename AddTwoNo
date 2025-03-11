@@ -1,15 +1,15 @@
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class Extras.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     Extras.ListNode next;
+ *     Extras.ListNode() {}
+ *     Extras.ListNode(int val) { this.val = val; }
+ *     Extras.ListNode(int val, Extras.ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+class Extras.Solution {
+    public Extras.ListNode addTwoNumbers(Extras.ListNode l1, Extras.ListNode l2) {
         
     }
 }
