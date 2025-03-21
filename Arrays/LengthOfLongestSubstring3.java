@@ -1,28 +1,27 @@
 package Arrays;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class LengthOfLongestSubstring3 {
 
     public static int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        int maxLength = 0;
+        int i = 0;
+        Map<Character, Integer> map = new HashMap<>();
 
-        int i=0,j=0,max=0;
-
-        HashSet<Character> set = new HashSet<>();
-
-        while(j<s.length()){
-            if(!set.contains(s.charAt(j))){
-                set.add(s.charAt(j));
-                j++;
-                max = Math.max(set.size(), max);
+        for (int j = 0; j < n; j++) {
+            if (map.containsKey(s.charAt(j))) {
+                // Update start of window to new position
+                i = Math.max(i, map.get(s.charAt(j)) + 1);
             }
-            else{
-                set.remove(s.charAt(i));
-                i++;
-            }
+            map.put(s.charAt(j), j);
+            maxLength = Math.max(maxLength, j - i + 1);
         }
 
-        return max;
+        return maxLength;
     }
     public static void main(String[] args) {
         String s = "abcabdcbb";
