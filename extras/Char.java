@@ -1,4 +1,4 @@
-package Extras;
+package extras;
 
 public class Char {
 

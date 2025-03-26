@@ -1,7 +1,5 @@
 package Strings;
 
-import Extras.Char;
-
 public class ZigZag_6 {
     public static String convert(String s, int numRows) {
         if(numRows==1) return s;

@@ -1,5 +1,5 @@
 # DSA
-DSA-Q and Extras.A
+DSA-Q and extras.A
 ##this  is  Data Structure and Algorithum repository 
 In this following repo 
 I will code for first 100 days 100 DSA Problems .. Daily 

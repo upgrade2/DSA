@@ -1,4 +1,4 @@
-package Extras;
+package extras;
 
 // Definition for singly-linked list.
 class ListNode {
