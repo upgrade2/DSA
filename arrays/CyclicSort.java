@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 //This is the HARD question for 41 Question no . on leetcode
 public class CyclicSort {

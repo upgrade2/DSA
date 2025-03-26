@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class Sort_0_and_1 {
 

@@ -1,6 +1,4 @@
-package Arrays;
-
-import com.sun.security.auth.UnixNumericGroupPrincipal;
+package arrays;
 
 public class RemoveDuplicates {
     public static int removeDuplicates(int[] nums) {

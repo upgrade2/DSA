@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class ZeroFilledSubarray {
     public static long zeroFilledSubarray(int[] nums) {

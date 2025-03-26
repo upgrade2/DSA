@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class MaxCount2529 {
     public static int maximumCount(int[] nums) {

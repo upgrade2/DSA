@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class BestTimeToBuyStock {
         public static int maxProfit(int[] prices) {
