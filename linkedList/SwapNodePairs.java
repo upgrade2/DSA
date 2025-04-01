@@ -1,6 +1,6 @@
 package linkedList;
 
-import static linkedList.PalindromeLinkedList.intialisedListNode;
+import static linkedList.ReverseLinkedList.intialisedListNode;
 import static linkedList.ReverseLinkedList.printList;
 
 public class SwapNodePairs {
