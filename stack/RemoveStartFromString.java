@@ -5,26 +5,15 @@ import java.util.Stack;
 public class RemoveStartFromString {
 
     public static String removeStars(String s) {
-
-        StringBuilder result = new StringBuilder();
-        Stack<Character> stack = new Stack<>();
-
-        for(char c :s.toCharArray()){
-            if(c!='*'){
-                stack.push(c);
-            }
-            else {
-                if(!stack.isEmpty()){
-                    stack.pop();
-                }
+        char[] result = s.toCharArray();
+        int index=0;
+        for(char c:result){
+            if(c!='*')result[index++]=c;
+            else{
+                if(index>0)index--;
             }
         }
-
-        for(char c :stack){
-            result.append(c);
-        }
-
-        return result.toString();
+        return new String(result,0,index);
     }
     public static void main(String[] args) {
         String s = "leet**cod*e";
