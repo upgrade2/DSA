@@ -5,31 +5,41 @@ import java.util.Stack;
 public class RemoveDuplicatesLetters {
 
     public static String removeDuplicateLetters(String s) {
-        int[] lastOccurrence = new int[26];
-        for (int i = 0; i < s.length(); i++) {
-            lastOccurrence[s.charAt(i) - 'a'] = i;
+
+        char[] c = s.toCharArray();
+        boolean[] seen =new boolean[26];
+        int[] freq =new int[26];
+        Stack<Character> stack = new Stack<>();
+
+        for(int i=0;i<c.length;i++){
+          freq[c[i]-'a']++;
         }
 
-        boolean[] inArray = new boolean[26];
-        char[] result = new char[s.length()]; // Simulate stack with char array
-        int stackPointer = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-            char current = s.charAt(i);
-            if (inArray[current - 'a']) continue;
-
-            while (stackPointer > 0 && result[stackPointer - 1] > current && lastOccurrence[result[stackPointer - 1] - 'a'] > i) {
-                inArray[result[--stackPointer] - 'a'] = false;
+        for(int i=0;i<s.length();i++){
+            if(seen[c[i]-'a']){
+                freq[c[i]-'a']--;
+                continue;
             }
 
-            result[stackPointer++] = current;
-            inArray[current - 'a'] = true;
+            while (!stack.empty()&& stack.peek()>c[i] && freq[stack.peek()-'a']>0){
+                seen[stack.peek()-'a']=false;
+                stack.pop();
+            }
+
+            stack.push(c[i]);
+            seen[c[i]-'a'] = true;
+            freq[c[i]-'a']--;
+        }
+        StringBuilder sb = new StringBuilder();
+        int i=0;
+        while( i <stack.size()){
+            sb.append(stack.pop());
         }
 
-        return new String(result, 0, stackPointer);
+        return sb.reverse().toString();
     }
     public static void main(String[] args) {
-        String s="bcabc";
+        String s=  "leetcode"; //"bcabc";
         System.out.println(removeDuplicateLetters(s));
     }
 
