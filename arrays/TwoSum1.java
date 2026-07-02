@@ -18,7 +18,7 @@ public class TwoSum1 {
     }
 
     public static void main(String[] args) {
-        int nums[]={2,7,11,15};
+        int nums[]={2,11,15,7};
         int target=9;
 
         for(int i : twoSum(nums,target)){
