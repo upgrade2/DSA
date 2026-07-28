@@ -1,26 +1,37 @@
 package binarySearch;
 
 public class MedianOfTwoSortedArrays {
+    //Best Time Complexity : O(log(min(n,m)))
     static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1= nums1.length;
         int n2 = nums2.length;
-        int i=0,j=0,k=0;
-        int[] mergeArray=new int[n1+n2];
-        while(i<n1 && j<n2){
-            if(nums1[i]<nums2[j]) mergeArray[k++]=nums1[i++];
-            else mergeArray[k++]=nums2[j++];
+        if(n1>n2) return findMedianSortedArrays(nums2,nums1);
+        int n=n1+n2;
+        int left = (n+1)/2;
+        int low =0 , high=n1;
+
+        while(low<=high){
+            int mid1 = (low+high)/2;
+            int mid2 = left-mid1;
+            int l1 = Integer.MIN_VALUE, l2 = Integer.MIN_VALUE;
+            int r1 = Integer.MAX_VALUE, r2 = Integer.MAX_VALUE;
+
+            //Check for left not having a value.
+            if(mid1<n1)r1=nums1[mid1];
+            if(mid2<n2)r2=nums2[mid2];
+            if(mid1-1>=0)l1 = nums1[mid1-1];
+            if(mid2-1>=0)l2 = nums2[mid2-1];
+
+            if(l1<=r2 && l2<=r1){
+                if(n % 2 == 1) return Math.max(l1,l2);
+                return (double) (Math.max(l1,l2)+Math.min(r1,r2))/2.0;
+            }
+            else if(l1>r2){
+                high = mid1-1;
+            }
+            else low = mid1+1;
         }
-        while(i<n1){
-            mergeArray[k++]=nums1[i++];
-        }
-        while(j<n2){
-            mergeArray[k++]=nums2[j++];
-        }
-        int length = mergeArray.length;
-        if(length%2==1){
-            return (double)mergeArray[length/2];
-        }
-    return ((double)mergeArray[length/2] + (double)mergeArray[length/2-1])/2.0;
+        return 0;
     }
     public static void main(String[] args) {
         //int[] arr1 = {1,2,3,4,5,7,9} ,arr2 ={3,6,8,10};
