@@ -1,4 +1,4 @@
-package bossCoder;
+package bossCoder.assignments.Arrays_Math;
 
 import com.sun.jdi.Value;
 
