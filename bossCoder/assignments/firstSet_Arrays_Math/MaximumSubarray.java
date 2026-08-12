@@ -1,4 +1,4 @@
-package bossCoder.assignments.Arrays_Math;
+package bossCoder.assignments.firstSet_Arrays_Math;
 
 public class MaximumSubarray {
 

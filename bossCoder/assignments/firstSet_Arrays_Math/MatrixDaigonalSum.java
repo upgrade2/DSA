@@ -1,4 +1,4 @@
-package bossCoder.assignments.Arrays_Math;
+package bossCoder.assignments.firstSet_Arrays_Math;
 
 import java.util.ArrayList;
 import java.util.List;

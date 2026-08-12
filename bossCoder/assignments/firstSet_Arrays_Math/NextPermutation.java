@@ -1,4 +1,4 @@
-package bossCoder.assignments.Arrays_Math;
+package bossCoder.assignments.firstSet_Arrays_Math;
 
 public class NextPermutation {
     public static int[] build(int[]  input){

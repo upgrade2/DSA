@@ -1,8 +1,4 @@
-package bossCoder.assignments.Arrays_Math;
-
-import com.sun.jdi.Value;
-
-import java.util.stream.Stream;
+package bossCoder.assignments.firstSet_Arrays_Math;
 
 public class CountChar {
     static int solve(String word,char c) {
