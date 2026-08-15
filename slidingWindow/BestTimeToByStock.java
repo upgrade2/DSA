@@ -2,15 +2,11 @@ package slidingWindow;
 
 public class BestTimeToByStock {
     public static int maxProfit(int[] prices) {
+        int minPrice =Integer.MAX_VALUE;
         int maxProfit=0;
-        int n=prices.length;
-        for(int i=0;i<n-1;i++){
-           for(int j=i;j<n-1;j++){
-              int profit =prices[j]-prices[i];
-               if(profit>0){
-                   maxProfit = Math.max(profit,maxProfit);
-               }
-           }
+        for(int price:prices){
+            minPrice = Math.min(price,minPrice);
+            maxProfit = Math.max(price-minPrice,maxProfit);
         }
         return maxProfit;
     }
